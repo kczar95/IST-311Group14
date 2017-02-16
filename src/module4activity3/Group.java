@@ -1,5 +1,7 @@
 package module4activity3;
 
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,13 +16,17 @@ public class Group {
     
     private String name;
     private String type;
-    private String members;
+    public ArrayList<String> members = new ArrayList<>();
     
-    public Group(String name, String type, String members)
+    public Group(String name, String type)
     {
     this.name = name;
     this.type = type;
-    this.members = members;
+    }
+    
+    public void addMember(String mem)
+    {
+        members.add(mem);
     }
     
     public String getGroupInfo()
@@ -30,6 +36,6 @@ public class Group {
     
     public String getGroupMembers()
     {
-        return "Group Members: " + members;
+        return "Group Members: " + members;       
     }
 }
