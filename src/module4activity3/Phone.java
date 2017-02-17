@@ -12,24 +12,56 @@ package module4activity3;
  */
 public class Phone {
     
-    private String phoneNumber;
-    private String phoneType;
+    private String cellNumber;
+    private String workNumber;
+    private String homeNumber;
     private String faxNumber;
     
-    public Phone(String phoneNumber, String phoneType, String faxNumber)
+    public Phone(String cellNumber, String workNumber, String homeNumber, String faxNumber)
     {
-    this.phoneNumber = phoneNumber;
-    this.phoneType = phoneType;
+    this.cellNumber = cellNumber;
+    this.workNumber = workNumber;
+    this.homeNumber = homeNumber;
     this.faxNumber = faxNumber;
     }
+  
     
-    public String getPhoneInfo()
+    public String getCellNumber()
     {
-    return phoneType + ": " + phoneNumber;
+    return "Cell Phone Number: " + cellNumber;
+    }
+    
+    public void editCellNumber(String newNum)
+    {
+    cellNumber = newNum;
+    }
+    
+    public String getworkNumber()
+    {
+    return "Work Phone Number: " + workNumber;
+    }
+    
+    public void editWorkNumber(String newNum)
+    {
+    workNumber = newNum;
+    }
+    public String getHomeNumber()
+    {
+    return "Home Phone Number: " + homeNumber;
+    }
+    
+    public void editHomeNumber(String newNum)
+    {
+    homeNumber = newNum;
     }
     
     public String getFaxNumber()
     {
     return "Fax Number: " + faxNumber;
+    }
+    
+    public void editFaxNumber(String newNum)
+    {
+    faxNumber = newNum;
     }
 }
