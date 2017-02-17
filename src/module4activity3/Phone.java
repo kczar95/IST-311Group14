@@ -10,7 +10,7 @@ package module4activity3;
  *
  * @author rfd5085
  */
-public class Phone {
+public abstract class Phone implements phoneMethods{
     
     private String cellNumber;
     private String workNumber;
@@ -25,7 +25,7 @@ public class Phone {
     this.faxNumber = faxNumber;
     }
   
-    
+    @Override
     public String getCellNumber()
     {
     return "Cell Phone Number: " + cellNumber;
@@ -36,7 +36,8 @@ public class Phone {
     cellNumber = newNum;
     }
     
-    public String getworkNumber()
+    @Override
+    public String getWorkNumber()
     {
     return "Work Phone Number: " + workNumber;
     }
@@ -45,6 +46,8 @@ public class Phone {
     {
     workNumber = newNum;
     }
+    
+    @Override
     public String getHomeNumber()
     {
     return "Home Phone Number: " + homeNumber;
@@ -54,7 +57,8 @@ public class Phone {
     {
     homeNumber = newNum;
     }
-    
+   
+    @Override
     public String getFaxNumber()
     {
     return "Fax Number: " + faxNumber;
