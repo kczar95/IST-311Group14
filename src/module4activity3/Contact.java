@@ -10,17 +10,15 @@ package module4activity3;
  * @author kkc5141
  */
 public class Contact {
-    private String contactType;
     private String group;
     private String relationship;
     private String email;
     private String birthday;
     private String personalNote;
     private String name;
+    private boolean isTrue;
     
-    
-    public Contact(String newName, String newContactType, String newGroup, String newEmail, String newRelationship, String newBirthday, String newPersonalNote){
-        contactType = newContactType;
+    public Contact(String newName, String newGroup, String newEmail, String newRelationship, String newBirthday, String newPersonalNote){
         group = newGroup;
         relationship = newRelationship;
         email = newEmail;
@@ -31,12 +29,26 @@ public class Contact {
 
     public String getFullContact()
     {
-        return name + ", " + contactType + ", " + group + ", " + relationship + ", " + email + ", " + birthday + ", " + personalNote;
+        return name + ", " + group + ", " + relationship + ", " + email + ", " + birthday + ", " + personalNote;
 
     }
     
     public boolean isRelated()
     {
-        if(relationship == "")
+        if(relationship == "Brother"){
+            return true;
+        } else if(relationship == "Sister"){
+            return true;
+        } else if(relationship == "Mother"){
+            return true;
+        } else if(relationship == "Father"){
+            return true;
+        } else if(relationship == "Grandparent"){
+            return true;
+        } else if(relationship == "Cousin"){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
