@@ -10,9 +10,15 @@ import javax.swing.*;
 public class NavViewSplashPanel extends JPanel{
     private JButton splashButton;
     private JLabel optionsLabel;
+    private JTextField userLogIn;
+    private JTextField userPwlog;
     NavViewSplashPanel()
     {
-            splashButton = new JButton(new ImageIcon("src/images/Chess.png"));            
+            userLogIn = new JTextField("Enter UserName");
+            add(userLogIn);
+            userPwlog = new JTextField("Enter Password");
+            add(userPwlog);
+            splashButton = new JButton("Enter");            
             add(splashButton);
             
             
