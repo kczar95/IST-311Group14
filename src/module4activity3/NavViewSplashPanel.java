@@ -1,12 +1,10 @@
 package module4activity3;
 
 
+import java.awt.LayoutManager;
+import java.awt.BorderLayout;
 import javax.swing.*;
 
-/**
- *
- * @author jrimland
- */
 public class NavViewSplashPanel extends JPanel{
     private JButton splashButton;
     private JLabel optionsLabel;
@@ -15,11 +13,10 @@ public class NavViewSplashPanel extends JPanel{
     NavViewSplashPanel()
     {
             userLogIn = new JTextField("Enter UserName");
-            add(userLogIn);
-            userPwlog = new JTextField("Enter Password");
-            add(userPwlog);
+            add(userLogIn, BorderLayout.CENTER);
             splashButton = new JButton("Enter");            
-            add(splashButton);
+            add(splashButton, BorderLayout.CENTER);
+            
             
             
     }    

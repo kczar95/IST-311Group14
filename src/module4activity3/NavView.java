@@ -5,12 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 
-/**
- *
- *  The Nav View exposes methods to the Nav Controller that allow it to switch panels
- * 
- * 
- */
+
 public class NavView extends JFrame{
     
     private NavModel model;
@@ -18,7 +13,7 @@ public class NavView extends JFrame{
     
     NavView(NavModel model)
     {
-        super("Primary View");
+        super("Team 14 Information Management App");
         this.model = model;
                           
         setSize(1200, 800);

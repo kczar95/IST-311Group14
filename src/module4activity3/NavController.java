@@ -1,11 +1,6 @@
 package module4activity3;
 
-/**
- *
- *  The Nav Controller handles logic to switch between Views
- * 
- * 
- */
+
 
 
 import java.awt.event.ActionEvent;
@@ -16,12 +11,9 @@ public class NavController {
     
     private NavModel n_model;
     private NavView n_view;
-    
-    //Instance Variables for Options Model, View, and Controller
     private OptionsModel o_model;
     private OptionsView o_view;
-    private OptionsController o_Controller;       
-    // TODO: Create instances of your MainModel and MainController once you implement them
+    private OptionsController o_Controller;
     private MainView m_view;
     private CreditsView c_view;
     private InstructionsView i_view;
@@ -46,7 +38,6 @@ public class NavController {
     class OptionsButtonListener implements ActionListener {            
         public void actionPerformed(ActionEvent e)
         {            
-            //Pass an Options View object to our Navigation View
             n_view.switchToOptionsPanel(o_view);
         }
     }     
@@ -54,7 +45,6 @@ public class NavController {
     class MainButtonListener implements ActionListener {            
         public void actionPerformed(ActionEvent e)
         {            
-            //Pass a Main View object to our Navigation View
             n_view.switchToMainPanel(m_view);
         }
     }
@@ -71,6 +61,6 @@ public class NavController {
             n_view.switchToCreditsPanel(c_view);
         }
     }
-    //TODO: Add listeners on buttons to switch to other Panels
+    
     
 }

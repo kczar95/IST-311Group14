@@ -4,10 +4,7 @@ package module4activity3;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author jrimland
- */
+
 public class NavViewPanel extends JPanel{
 
     NavViewBottomMenuPanel menu;
@@ -16,17 +13,14 @@ public class NavViewPanel extends JPanel{
     private OptionsView o_view;
     private MainView m_view;
     private InstructionsView i_view;
-    //private MovePanel movePanel;
     private CreditsView c_view;
-   // private GameBoard gameBoard;
     
     public NavViewPanel() {
         super();
         setLayout(new BorderLayout());     
         menu = new NavViewBottomMenuPanel();
         splash = new NavViewSplashPanel();
-        //movePanel = new MovePanel();
-        //gameBoard = new GameBoard(movePanel);
+        
         
 
         
@@ -35,7 +29,7 @@ public class NavViewPanel extends JPanel{
         
     }
     
-    //Note: Splash scrren is only shown on startup.  No need to navigate back to it.
+   
     
     public void addInstructions(InstructionsView i_view)
     {
@@ -47,7 +41,7 @@ public class NavViewPanel extends JPanel{
     
     public void addOptions(OptionsView o_view)
     {
-        this.o_view = o_view; //maintain handle to this view so we can remove it
+        this.o_view = o_view; 
         add(o_view, BorderLayout.CENTER);
         revalidate();
         repaint();
@@ -62,13 +56,8 @@ public class NavViewPanel extends JPanel{
     }
     public void addMain(MainView m_view)
     {
-        this.m_view = m_view;  //maintain handle to this view so we can remove it
-        //this.movePanel = movePanel;
-        //this.gameBoard = gameBoard;
-        
+        this.m_view = m_view; 
         add(m_view, BorderLayout.NORTH);
-        //add(gameBoard, BorderLayout.CENTER); 
-        //add(movePanel, BorderLayout.EAST); 
         revalidate();
         repaint();
     }    
@@ -91,8 +80,6 @@ public class NavViewPanel extends JPanel{
     {
         if (this.m_view != null)
             remove(this.m_view);
-            //remove(this.movePanel);
-            //remove(this.gameBoard);
     }    
     
     public void removeSplash()
