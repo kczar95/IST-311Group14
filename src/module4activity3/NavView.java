@@ -76,6 +76,5 @@ public class NavView extends JFrame{
         nVpanel.menu.creditsButton.addActionListener(al);
     }
     
-    //TODO: Add listeners to switch to other Panels
     
 }
